@@ -13,7 +13,7 @@ public class WEAPON : MonoBehaviour
     Vector3 worldPosition;
     public Transform shootSpawn;
     public Transform shootPos;
-    float SpeedBullet = 5;
+    float SpeedBullet = 10;
     public bool isDestructible;
     public bool WeaponActivate;
     // Start is called before the first frame update
@@ -59,18 +59,11 @@ public class WEAPON : MonoBehaviour
             totalDirectionX = -totalDirectionX;
         }
         newBullet.GetComponent<Rigidbody>().velocity = new Vector2((ShootDirection.x / totalDirectionX), (ShootDirection.y / totalDirectionY));
-
-        //newBullet.transform.Translate(newBullet.GetComponent<Rigidbody>().velocity.forward, Time.deltaTime);
-       // newBullet.GetComponent<Rigidbody>().velocity = newBullet.transform.forward * SpeedBullet * Time.deltaTime;
-        newBullet.transform.right = (transform.position - shootPos.position).normalized;
+        newBullet.GetComponent<Rigidbody>().velocity = (Vector3.Normalize(newBullet.GetComponent<Rigidbody>().velocity) * SpeedBullet);
+        newBullet.transform.right = (transform.position - ShootDirection).normalized;
         Projectil statBullet = newBullet.GetComponent<Projectil>();
         statBullet.attack = attack;
         statBullet.isDestructible = isDestructible ;
-        StartCoroutine(waitToMakeItTrigger(newBullet));
     }
-    IEnumerator waitToMakeItTrigger(GameObject Bullet)
-    { 
-        yield return new WaitForSeconds(0.1f);
-        Bullet.GetComponent<BoxCollider>().isTrigger = true;
-    }
+  
 }
