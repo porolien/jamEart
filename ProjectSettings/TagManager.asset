@@ -10,6 +10,8 @@ TagManager:
   - lowStairs
   - highStairs
   - spaceship
+  - interactItem
+  - ModuleInput
   layers:
   - Default
   - TransparentFX

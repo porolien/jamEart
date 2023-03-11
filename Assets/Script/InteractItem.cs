@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class InteractItem : MonoBehaviour
 {
+    Animator animator;
+    public string itemName;
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -17,10 +19,10 @@ public class InteractItem : MonoBehaviour
     }
     public void hoverOnItem()
     {
-
+        animator.SetBool("IsHovered", true);
     }
     public void disableTheHover()
     {
-
+        animator.SetBool("IsHovered", false);
     }
 }

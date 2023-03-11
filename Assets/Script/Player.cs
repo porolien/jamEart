@@ -13,6 +13,13 @@ public class Player : MonoBehaviour
     public Pause pause;
     SpriteRenderer renderer = null;
     Animator animator = null;
+    GameObject interactObject;
+    public PlayerInput action;
+    public WEAPON weapon;
+    public Extract extract;
+    public GameObject PCHUD;
+    string InteractItemChanged;
+    public UIPC UIPC;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,11 +73,48 @@ public class Player : MonoBehaviour
     }*/
     void OnUseItem()
     {
-      
+      if(interactObject != null)
+        {
+            switch (interactObject.GetComponent<InteractItem>().itemName)
+            {
+                case "weapons":
+                    action.SwitchCurrentActionMap("StopMovement");
+                    weapon.WeaponActivate = true;
+                    InteractItemChanged = "weapons";
+                    break;
+                case "cockpit":
+                    action.SwitchCurrentActionMap("StopMovement");
+                    extract.extractIsActivated = true;
+                    InteractItemChanged = "cockpit";
+                    break;
+                case "pc":
+                    action.SwitchCurrentActionMap("StopMovement");
+                    PCHUD.SetActive(true);
+                    InteractItemChanged = "pc";
+                    UIPC.initPC();
+                    break;
+            }
+        }
     }
     void OnPause()
     {
-        pause.PauseFonction();
+        pause.Paus(true);
+    }
+    void OnEscape()
+    {
+        action.SwitchCurrentActionMap("PlayerMovement");
+        switch (InteractItemChanged)
+        {
+            case "weapons":
+                weapon.WeaponActivate = false;
+                break;
+            case "cockpit":
+                extract.extractIsActivated = false;
+                break;
+            case "pc":
+                PCHUD.SetActive(false);
+                break;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -85,6 +129,7 @@ public class Player : MonoBehaviour
         if (other.tag == "interactItem")
         {
             other.GetComponent<InteractItem>().hoverOnItem();
+            interactObject = other.gameObject;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -100,6 +145,7 @@ public class Player : MonoBehaviour
         if (other.tag == "interactItem")
         {
             other.GetComponent<InteractItem>().disableTheHover();
+            interactObject = null;
         }
     }
     IEnumerator Climb(Vector3 StairsPosition)
