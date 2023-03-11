@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8249adbef0c0400438ea45785b33b01d
+guid: d7d594836cc3b7241a67f6e7ba2d4521
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,41 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_0
+      name: cockpit grab module-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 970
-        height: 544
+        width: 32
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca11636dc5eef25488b18986002dfb72
-      internalID: -1716198200
+      spriteID: 657db7e36b3f10646a3670584d0e4c35
+      internalID: -394964158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_1
+      name: cockpit grab module-Sheet_1
       rect:
         serializedVersion: 2
-        x: 970
+        x: 32
         y: 0
-        width: 970
-        height: 544
+        width: 32
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f92d44804baad2f4ab5735829589933a
-      internalID: 1344889364
+      spriteID: 06015599669ccb64f88c561652440357
+      internalID: -1161252632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_2
+      name: cockpit grab module-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1940
+        x: 64
         y: 0
-        width: 970
-        height: 544
+        width: 32
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e046209f669d12d4ba0e07e34dc86d77
-      internalID: -847165013
+      spriteID: c3d5a0825c8a07140b884454aa9d815f
+      internalID: -599424661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_3
+      name: cockpit grab module-Sheet_3
       rect:
         serializedVersion: 2
-        x: 2910
+        x: 96
         y: 0
-        width: 970
-        height: 544
+        width: 32
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e64cfeda992dac9419d8803d2443a1e1
-      internalID: 55877608
+      spriteID: 06897c7fe10c88c438aa1b3b1c38570c
+      internalID: 631659616
       vertices: []
       indices: 
       edges: []
@@ -215,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 989678ddc53e76346a966e4efb4c043f
+    spriteID: cf84ec16a54829744b71828f21a002df
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UI_Sceen_bug_effect_0: -1716198200
-      UI_Sceen_bug_effect_3: 55877608
-      UI_Sceen_bug_effect_1: 1344889364
-      UI_Sceen_bug_effect_2: -847165013
+      cockpit grab module-Sheet_0: -394964158
+      cockpit grab module-Sheet_3: 631659616
+      cockpit grab module-Sheet_1: -1161252632
+      cockpit grab module-Sheet_2: -599424661
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

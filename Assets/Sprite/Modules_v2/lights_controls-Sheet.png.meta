@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8249adbef0c0400438ea45785b33b01d
+guid: 2f0f0e17130250747b5eee23de984df5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,41 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_0
+      name: lights_controls-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 11
         y: 0
-        width: 970
-        height: 544
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca11636dc5eef25488b18986002dfb72
-      internalID: -1716198200
+      spriteID: ee9e114acc228ba4eac29476c9e94dca
+      internalID: -1066206448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_1
+      name: lights_controls-Sheet_1
       rect:
         serializedVersion: 2
-        x: 970
+        x: 27
         y: 0
-        width: 970
-        height: 544
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f92d44804baad2f4ab5735829589933a
-      internalID: 1344889364
+      spriteID: a361fe7dc42d8534781dbdc3b3a3026e
+      internalID: -287757546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_2
+      name: lights_controls-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1940
+        x: 43
         y: 0
-        width: 970
-        height: 544
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e046209f669d12d4ba0e07e34dc86d77
-      internalID: -847165013
+      spriteID: ff8790034520bb14c895470813bc6eae
+      internalID: 683189306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_3
+      name: lights_controls-Sheet_3
       rect:
         serializedVersion: 2
-        x: 2910
+        x: 59
         y: 0
-        width: 970
-        height: 544
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e64cfeda992dac9419d8803d2443a1e1
-      internalID: 55877608
+      spriteID: 185ec7500e98d354497df61ffe278e90
+      internalID: 2045154838
       vertices: []
       indices: 
       edges: []
@@ -215,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 989678ddc53e76346a966e4efb4c043f
+    spriteID: 57496ea9aa7474349b0d8edc76f3de2c
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UI_Sceen_bug_effect_0: -1716198200
-      UI_Sceen_bug_effect_3: 55877608
-      UI_Sceen_bug_effect_1: 1344889364
-      UI_Sceen_bug_effect_2: -847165013
+      lights_controls-Sheet_1: -287757546
+      lights_controls-Sheet_2: 683189306
+      lights_controls-Sheet_3: 2045154838
+      lights_controls-Sheet_0: -1066206448
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

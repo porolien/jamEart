@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8249adbef0c0400438ea45785b33b01d
+guid: 45a1734d1b7876349b0f256ba799363c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,41 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_0
+      name: weapons control-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 0
-        width: 970
-        height: 544
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca11636dc5eef25488b18986002dfb72
-      internalID: -1716198200
+      spriteID: 013149d42dd3c1c4598fd0d5e90ae283
+      internalID: 338849373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_1
+      name: weapons control-Sheet_1
       rect:
         serializedVersion: 2
-        x: 970
+        x: 19
         y: 0
-        width: 970
-        height: 544
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f92d44804baad2f4ab5735829589933a
-      internalID: 1344889364
+      spriteID: 629ac5389ea00504ea093067c7ccdaa0
+      internalID: 221435917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_2
+      name: weapons control-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1940
+        x: 35
         y: 0
-        width: 970
-        height: 544
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e046209f669d12d4ba0e07e34dc86d77
-      internalID: -847165013
+      spriteID: db5a096239a9dfe4c852f0ae9c05bfbb
+      internalID: -739293185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_3
+      name: weapons control-Sheet_3
       rect:
         serializedVersion: 2
-        x: 2910
+        x: 51
         y: 0
-        width: 970
-        height: 544
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e64cfeda992dac9419d8803d2443a1e1
-      internalID: 55877608
+      spriteID: 47690689f41cbf54aa287accde00ca11
+      internalID: 1620143532
       vertices: []
       indices: 
       edges: []
@@ -215,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 989678ddc53e76346a966e4efb4c043f
+    spriteID: 8c93af70de9031d4ababf6dcac457270
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UI_Sceen_bug_effect_0: -1716198200
-      UI_Sceen_bug_effect_3: 55877608
-      UI_Sceen_bug_effect_1: 1344889364
-      UI_Sceen_bug_effect_2: -847165013
+      weapons control-Sheet_0: 338849373
+      weapons control-Sheet_2: -739293185
+      weapons control-Sheet_3: 1620143532
+      weapons control-Sheet_1: 221435917
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

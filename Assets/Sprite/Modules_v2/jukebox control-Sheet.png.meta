@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8249adbef0c0400438ea45785b33b01d
+guid: 35378a42703b8f149b4d00111e4f92c7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,41 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_0
+      name: jukebox control-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 0
-        width: 970
-        height: 544
+        width: 11
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca11636dc5eef25488b18986002dfb72
-      internalID: -1716198200
+      spriteID: fcc3275154c8b9b4b9a9ad4bdf8e9d5d
+      internalID: -1917350036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_1
+      name: jukebox control-Sheet_1
       rect:
         serializedVersion: 2
-        x: 970
+        x: 21
         y: 0
-        width: 970
-        height: 544
+        width: 11
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f92d44804baad2f4ab5735829589933a
-      internalID: 1344889364
+      spriteID: 8531b70462665674bbd06b109b2c57c0
+      internalID: 1360896608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_2
+      name: jukebox control-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1940
+        x: 37
         y: 0
-        width: 970
-        height: 544
+        width: 11
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e046209f669d12d4ba0e07e34dc86d77
-      internalID: -847165013
+      spriteID: f65c0d97f5fc425428a3933f3e6e5fea
+      internalID: 1381030293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Sceen_bug_effect_3
+      name: jukebox control-Sheet_3
       rect:
         serializedVersion: 2
-        x: 2910
+        x: 53
         y: 0
-        width: 970
-        height: 544
+        width: 11
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e64cfeda992dac9419d8803d2443a1e1
-      internalID: 55877608
+      spriteID: 17a56300b3ef0784aa593eabea91779c
+      internalID: -1789169862
       vertices: []
       indices: 
       edges: []
@@ -215,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 989678ddc53e76346a966e4efb4c043f
+    spriteID: e1755ec3b414dc043854f7cab4515a20
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UI_Sceen_bug_effect_0: -1716198200
-      UI_Sceen_bug_effect_3: 55877608
-      UI_Sceen_bug_effect_1: 1344889364
-      UI_Sceen_bug_effect_2: -847165013
+      jukebox control-Sheet_1: 1360896608
+      jukebox control-Sheet_2: 1381030293
+      jukebox control-Sheet_0: -1917350036
+      jukebox control-Sheet_3: -1789169862
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
