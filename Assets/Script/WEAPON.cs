@@ -15,6 +15,7 @@ public class WEAPON : MonoBehaviour
     public Transform shootPos;
     float SpeedBullet = 5;
     public bool isDestructible;
+    public bool WeaponActivate;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,21 +25,22 @@ public class WEAPON : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+        if (WeaponActivate)
+        {
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 10000))
             {
-               
-              Debug.Log(hit.point);
-                transform.up = (( hit.point - transform.position).normalized  );
-            }
-        if (Input.GetMouseButtonDown(0))
-        {
-            Shoot(hit.point);
-        }
 
+                Debug.Log(hit.point);
+                transform.up = ((hit.point - transform.position).normalized);
+            }
+            if (Input.GetMouseButtonDown(0))
+            {
+                Shoot(hit.point);
+            }
+        }
     }
 
     void Shoot(Vector3 ShootDirection)
@@ -56,9 +58,10 @@ public class WEAPON : MonoBehaviour
             }
             totalDirectionX = -totalDirectionX;
         }
-        newBullet.GetComponent<Rigidbody>().velocity = new Vector2((ShootDirection.x / totalDirectionX) * SpeedBullet, (ShootDirection.y / totalDirectionY) * SpeedBullet);
+        newBullet.GetComponent<Rigidbody>().velocity = new Vector2((ShootDirection.x / totalDirectionX), (ShootDirection.y / totalDirectionY));
 
         //newBullet.transform.Translate(newBullet.GetComponent<Rigidbody>().velocity.forward, Time.deltaTime);
+       // newBullet.GetComponent<Rigidbody>().velocity = newBullet.transform.forward * SpeedBullet * Time.deltaTime;
         newBullet.transform.right = (transform.position - shootPos.position).normalized;
         Projectil statBullet = newBullet.GetComponent<Projectil>();
         statBullet.attack = attack;
@@ -68,6 +71,6 @@ public class WEAPON : MonoBehaviour
     IEnumerator waitToMakeItTrigger(GameObject Bullet)
     { 
         yield return new WaitForSeconds(0.1f);
-        Bullet.GetComponent<CapsuleCollider>().isTrigger = true;
+        Bullet.GetComponent<BoxCollider>().isTrigger = true;
     }
 }

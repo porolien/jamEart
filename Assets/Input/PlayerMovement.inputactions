@@ -112,6 +112,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "StopMovement",
+            "id": "289cb45f-f344-49fe-83dc-9284b8081b97",
+            "actions": [
+                {
+                    "name": "Escape",
+                    "type": "Button",
+                    "id": "13d00aab-0172-4211-80b7-adfb22e68965",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4fc7eb01-5583-4e68-8f7a-abe92673db84",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Escape",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

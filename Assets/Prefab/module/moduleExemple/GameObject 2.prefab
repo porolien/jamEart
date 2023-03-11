@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   type: shield
-  image: {fileID: 1123616697002120378, guid: 68ed966d631b98240a36fbd8a85f8577, type: 3}
+  image: {fileID: 4154467139485105118, guid: c16aaa1d914bc984c912765995ce5009, type: 3}
   alreadyHad: 0
   modules:
   - {fileID: 7401552374377111077, guid: dac1b118ac1454e429128c1e6264d629, type: 3}

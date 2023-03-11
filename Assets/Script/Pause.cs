@@ -25,7 +25,7 @@ public class Pause : MonoBehaviour
         }
         else
         {
-            Paus();
+            Paus(true);
         }
     }
     public void Resume()
@@ -35,7 +35,7 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
-    public void Paus()
+    public void Paus(bool Menu)
     {
         Debug.Log("pause");
         pauseMenuUI.SetActive(true);
