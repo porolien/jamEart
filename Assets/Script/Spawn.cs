@@ -21,7 +21,7 @@ public class Spawn : MonoBehaviour
     void SpawnAnItemInSpace()
     {
         GameObject newItem = Instantiate (gameObjects[Random.Range(0, gameObjects.Length)]);
-        float spawnX = 0;
+       /* float spawnX = 0;
         if(Random.Range(0, 2) == 0)
         {
             spawnX = -35;
@@ -29,15 +29,15 @@ public class Spawn : MonoBehaviour
         else
         {
             spawnX = 35;
-        }
-        newItem.transform.position = new Vector3(spawnX, Random.Range(-13, 16), 0);
+        }*/
+        newItem.transform.position = new Vector3(35, Random.Range(-15, 3), 0);
         if (newItem.transform.position.y < 1)
         {
-            direction = new Vector2(-spawnX, Random.Range(1, 16));
+            direction = new Vector2(-35, Random.Range(-5, 3));
         }
         else
         {
-            direction = new Vector2(-spawnX, Random.Range(-13, 1));
+            direction = new Vector2(-35, Random.Range(-15, -5));
         }
         newItem.GetComponent<ItemInSpace>().direction = direction;
     }

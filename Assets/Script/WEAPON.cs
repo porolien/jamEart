@@ -11,6 +11,7 @@ public class WEAPON : MonoBehaviour
     public GameObject bullet;
     public GameObject laser;
     Vector3 worldPosition;
+    public Transform shootSpawn;
     public Transform shootPos;
     float SpeedBullet = 5;
     public bool isDestructible;
@@ -30,8 +31,8 @@ public class WEAPON : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 10000))
             {
                
-              
-                transform.right = -((transform.position - hit.point).normalized);
+              Debug.Log(hit.point);
+                transform.up = (( hit.point - transform.position).normalized  );
             }
         if (Input.GetMouseButtonDown(0))
         {
@@ -43,7 +44,7 @@ public class WEAPON : MonoBehaviour
     void Shoot(Vector3 ShootDirection)
     {
         GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
-        newBullet.transform.position = Vector2.MoveTowards(transform.position, shootPos.position, 5 * Time.deltaTime);
+        newBullet.transform.position = Vector2.MoveTowards(transform.position, ShootDirection, 20 * Time.deltaTime);
         newBullet.transform.right = (transform.position - shootPos.position).normalized;
         Projectil statBullet = newBullet.GetComponent<Projectil>();
         statBullet.attack = attack;
@@ -53,6 +54,6 @@ public class WEAPON : MonoBehaviour
     IEnumerator waitToMakeItTrigger(GameObject Bullet)
     { 
         yield return new WaitForSeconds(0.1f);
-        Bullet.GetComponent<CapsuleCollider>().isTrigger = true;
+        //Bullet.GetComponent<CapsuleCollider>().isTrigger = true;
     }
 }
