@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 245856072761c9c4ba475090505d0187
+guid: b9d3c0688766d7b4982f7355b344a273
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,83 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: modules_icons_0
+      name: lights_controls-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e42b7ccc8cfdc4d4c8f9d78c763bc8be
-      internalID: 895542981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: modules_icons_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0485a674a4aa964bb1e4eb7808e2bd1
-      internalID: -441248107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: modules_icons_2
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 11
         y: 0
-        width: 16
-        height: 16
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b142717665638348b053e58a303f58a
-      internalID: -676241791
+      spriteID: ac2aebac6c2e2e14695a0131faca5ef8
+      internalID: -1326810091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: modules_icons_3
+      name: lights_controls-Sheet_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 27
         y: 0
-        width: 16
-        height: 16
+        width: 5
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +140,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51ab527eaf2090745825c61331f3bf5e
-      internalID: 1674158193
+      spriteID: 4ff73b19a23ed6540adc5922830d99e6
+      internalID: -293151642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lights_controls-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 0
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d57c4a1ee308944ad30da0ddf8beef
+      internalID: 432515536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lights_controls-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 0
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6932c3663f1b3648bf31eff9df85674
+      internalID: 1328552780
       vertices: []
       indices: 
       edges: []
@@ -215,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 151ebf100e698b649bda0c7775bfb176
+    spriteID: 61361a7f31f14c6409fea3eadb0603ac
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      modules_icons_2: -676241791
-      modules_icons_3: 1674158193
-      modules_icons_1: -441248107
-      modules_icons_0: 895542981
+      lights_controls-Sheet_1: -293151642
+      lights_controls-Sheet_2: 432515536
+      lights_controls-Sheet_3: 1328552780
+      lights_controls-Sheet_0: -1326810091
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
