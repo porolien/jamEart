@@ -21,24 +21,30 @@ public class Pause : MonoBehaviour
     {
         if (GameIsPaused)
         {
-            Resume();
+            Resume(true);
         }
         else
         {
             Paus(true);
         }
     }
-    public void Resume()
+    public void Resume(bool Menu)
     {
         Debug.Log("resume");
-        pauseMenuUI.SetActive(false);
+        if (Menu)
+        {
+            pauseMenuUI.SetActive(false);
+        }
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
     public void Paus(bool Menu)
     {
         Debug.Log("pause");
-        pauseMenuUI.SetActive(true);
+        if (Menu)
+        {
+            pauseMenuUI.SetActive(true);
+        }
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
