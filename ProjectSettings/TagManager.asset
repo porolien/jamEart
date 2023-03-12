@@ -12,6 +12,7 @@ TagManager:
   - spaceship
   - interactItem
   - ModuleInput
+  - cometShard
   layers:
   - Default
   - TransparentFX

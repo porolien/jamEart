@@ -45,10 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Rouge
-  type: musique
+  type: jukebox
   image: {fileID: 1123616697002120378, guid: e530cea03baffb544bdf7914e342b7bd, type: 3}
   alreadyHad: 0
-  modules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

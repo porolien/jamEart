@@ -7,6 +7,7 @@ public class Comet : MonoBehaviour
     public float hp;
     public float attack;
     public bool canTakeDmg;
+    public GameObject cometShard;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,8 @@ public class Comet : MonoBehaviour
     }
     void die()
     {
+        GameObject newCometShard = Instantiate(cometShard);
+        newCometShard.transform.position = transform.position;
         Destroy(gameObject);
     }
     void TakeDmg(float dmg)

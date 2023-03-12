@@ -17,6 +17,7 @@ public class WEAPON : MonoBehaviour
     float SpeedBullet = 10;
     public bool isDestructible;
     public bool WeaponActivate;
+    public bool EnableTheSecondWeapon;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,10 @@ public class WEAPON : MonoBehaviour
     {
         if (WeaponActivate)
         {
+            if(EnableTheSecondWeapon && (Input.GetButtonDown("S")|| Input.GetButtonDown("Z")))
+            {
 
+            }
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 10000))

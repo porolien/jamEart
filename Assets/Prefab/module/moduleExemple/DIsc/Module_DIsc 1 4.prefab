@@ -45,10 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Pink
-  type: musique
+  type: jukebox
   image: {fileID: 1123616697002120378, guid: 7c5b2501bfb42ad439551e2e0fa62829, type: 3}
   alreadyHad: 0
-  modules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

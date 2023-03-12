@@ -9,6 +9,7 @@ public class Extract : MonoBehaviour
     public float extractSpeed;
     public bool isExtracted;
     public bool extractIsActivated;
+    public bool CanExtractComet;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,11 @@ public class Extract : MonoBehaviour
                     if (TheExtractedItem.tag == "extractItem")
                     {
                         //extractTheItem(TheExtractedItem, true);
+                        isExtracted = true;
+                        TheExtractedItem.GetComponent<ItemInSpace>().isExtracted = true;
+                    }
+                    else if(TheExtractedItem.tag == "cometShard" && CanExtractComet)
+                    {
                         isExtracted = true;
                         TheExtractedItem.GetComponent<ItemInSpace>().isExtracted = true;
                     }

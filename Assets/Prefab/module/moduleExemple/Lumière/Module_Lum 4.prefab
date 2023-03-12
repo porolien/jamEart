@@ -45,10 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Pink
-  type: lumiere
+  type: light
   image: {fileID: 1123616697002120378, guid: bb8e63a015ef0c34e824c75cb13bc5aa, type: 3}
   alreadyHad: 0
-  modules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

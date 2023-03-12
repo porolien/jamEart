@@ -9,6 +9,7 @@ public class UIPC : MonoBehaviour
     public GameObject Content;
     public Spaceship modules;
     public GameObject canva;
+    public FuelBar FuelBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,18 +23,23 @@ public class UIPC : MonoBehaviour
     }
     public void initPC()
     {
-        foreach (Transform child in Content.transform)
+        FuelBar.UpdateTheBar();
+        foreach (Transform aChild in Content.transform)
         {
-                Destroy(child.gameObject);
+                Destroy(aChild.gameObject);
         }
-        foreach (var module in modules.ModulesInventary)
+        foreach (Module module in modules.ModulesInventary)
         {
-            Image NewImage = Instantiate(module.image, Content.transform, false);
-            NewImage.AddComponent<Module>().type = module.type;
-            NewImage.AddComponent<Button>().onClick.AddListener(delegate { beginInteractable(NewImage); });
+            if (module.willBeseeOnContent)
+            {
+                Module NewImage = Instantiate(module, Content.transform, false);
+                Image theImage = NewImage.gameObject.AddComponent<Image>();
+                theImage.sprite = module.image.sprite;
+                NewImage.AddComponent<Button>().onClick.AddListener(delegate { beginInteractable(NewImage); });
+            }
         }
     }
-    void beginInteractable(Image theImage)
+    void beginInteractable(Module theImage)
     {   
         canva.GetComponent<InteractivImage>().moveImage(theImage.gameObject, Content.transform);
     }

@@ -9,6 +9,7 @@ public class Module : MonoBehaviour
     public string type;
     public Image image;
     public bool alreadyHad;
+    public bool willBeseeOnContent = true;
     // Start is called before the first frame update
     void Start()
     {
