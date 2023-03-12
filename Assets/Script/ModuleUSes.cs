@@ -19,6 +19,9 @@ namespace UnityEngine.Rendering.Universal
         public GameObject anotherTurret;
         public WEAPON weapon;
         public Jukebox TheJukebox;
+public float R;
+public float G;
+public float B;
         // Start is called before the first frame update
         void Start()
         {
@@ -28,10 +31,14 @@ namespace UnityEngine.Rendering.Universal
         // Update is called once per frame
         void Update()
         {
-            if (change)
+foreach(Light2D light2D in lights)
+            {
+                light2D.color = new Color(R, G, B);
+            }
+            /*if (change)
             {
                 StartCoroutine(Disco());
-            }
+            }*/
         }
         IEnumerator Disco()
         {
