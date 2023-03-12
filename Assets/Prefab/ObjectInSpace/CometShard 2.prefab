@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2279279632911468650}
   - component: {fileID: -4632434939957136587}
   m_Layer: 0
-  m_Name: CometShard
+  m_Name: CometShard 2
   m_TagString: cometShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2051b05c8bdf43d40ba65ca199bef961, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f561c83be7c620846a78d8e849fbd599, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
