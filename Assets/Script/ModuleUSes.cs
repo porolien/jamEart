@@ -18,6 +18,7 @@ namespace UnityEngine.Rendering.Universal
         bool change = true;
         public GameObject anotherTurret;
         public WEAPON weapon;
+        public Jukebox TheJukebox;
         // Start is called before the first frame update
         void Start()
         {
@@ -47,6 +48,7 @@ namespace UnityEngine.Rendering.Universal
             switch (module.type)
             {
                 case "jukebox":
+                    ModuleJukebox(module.name);
                     break;
                 case "shield":
                     ModuleShield();
@@ -61,9 +63,19 @@ namespace UnityEngine.Rendering.Universal
                     break;
             }
         }
-        void ModuleJukebox()
+        void ModuleJukebox(string diskName)
         {
-
+            AudioClip TheSongToShare = null;
+            Debug.Log(diskName);
+            foreach(AudioClip song in sounds)
+            {
+                if(song.name == diskName)
+                {
+                    TheSongToShare = song;
+                }
+            }
+            Debug.Log(TheSongToShare.name);
+            TheJukebox.addTrack(TheSongToShare);
         }
         void ModuleShield()
         {
@@ -74,6 +86,8 @@ namespace UnityEngine.Rendering.Universal
             if(module.name == "poser")
             {
                 anotherTurret.SetActive(true);
+                weapon.EnableTheSecondWeapon = true;
+                
             }
             else
             {

@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public GameObject PCHUD;
     string InteractItemChanged;
     public UIPC UIPC;
+    public GameObject TheJukebox;
     // Start is called before the first frame update
     void Start()
     {
@@ -94,6 +95,12 @@ public class Player : MonoBehaviour
                     InteractItemChanged = "pc";
                     UIPC.initPC();
                     break;
+                case "jukebox":
+                    action.SwitchCurrentActionMap("StopMovement");
+                    TheJukebox.SetActive(true);
+                    // pause.Paus(false);
+                    InteractItemChanged = "jukebox";
+                    break;
             }
         }
     }
@@ -107,7 +114,7 @@ public class Player : MonoBehaviour
         switch (InteractItemChanged)
         {
             case "weapons":
-                weapon.WeaponActivate = false;
+                weapon.DesactivateAllTurret();
                 break;
             case "cockpit":
                 extract.extractIsActivated = false;
@@ -115,6 +122,9 @@ public class Player : MonoBehaviour
             case "pc":
                 PCHUD.SetActive(false);
              //   pause.Resume(false);
+                break;
+            case "jukebox":
+                TheJukebox.SetActive(false);
                 break;
         }
     }
