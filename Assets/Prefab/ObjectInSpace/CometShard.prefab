@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 2488940097733945070}
   - component: {fileID: -3391616536083861634}
   - component: {fileID: -2279279632911468650}
-  - component: {fileID: -4492631238271936344}
   - component: {fileID: -4632434939957136587}
   m_Layer: 0
-  m_Name: Comet
-  m_TagString: Untagged
+  m_Name: CometShard
+  m_TagString: cometShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +43,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6207367104956618767}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6486474, y: 0.6512884, z: 1}
@@ -81,22 +80,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-4492631238271936344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6207367104956618767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 418ca42d91044e5489577e46f2467bf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 10
-  attack: 1
-  canTakeDmg: 1
-  cometShard: {fileID: 6207367104956618767, guid: 9385e600ac7bc8d43904fca465d58eab, type: 3}
 --- !u!212 &-4632434939957136587
 SpriteRenderer:
   m_ObjectHideFlags: 0

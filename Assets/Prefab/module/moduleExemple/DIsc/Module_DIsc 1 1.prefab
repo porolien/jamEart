@@ -45,10 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Cyan
-  type: musique
+  type: jukebox
   image: {fileID: 1123616697002120378, guid: 68ed966d631b98240a36fbd8a85f8577, type: 3}
   alreadyHad: 0
-  modules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

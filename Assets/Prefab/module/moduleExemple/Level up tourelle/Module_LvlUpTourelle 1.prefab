@@ -45,10 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: poser
-  type: tourelle
+  type: turret
   image: {fileID: 1123616697002120378, guid: f22e081597057e6498fa9ef6aa213c7d, type: 3}
   alreadyHad: 0
-  modules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

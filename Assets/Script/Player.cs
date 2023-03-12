@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
                 case "pc":
                     action.SwitchCurrentActionMap("StopMovement");
                     PCHUD.SetActive(true);
-                    pause.Paus(false);
+                   // pause.Paus(false);
                     InteractItemChanged = "pc";
                     UIPC.initPC();
                     break;
@@ -114,7 +114,7 @@ public class Player : MonoBehaviour
                 break;
             case "pc":
                 PCHUD.SetActive(false);
-                pause.Resume(false);
+             //   pause.Resume(false);
                 break;
         }
     }

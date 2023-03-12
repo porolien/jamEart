@@ -45,10 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Blue
-  type: musique
+  type: jukebox
   image: {fileID: 1123616697002120378, guid: 80d6a5082d4e3834fa485d77d05d7698, type: 3}
   alreadyHad: 0
-  modules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

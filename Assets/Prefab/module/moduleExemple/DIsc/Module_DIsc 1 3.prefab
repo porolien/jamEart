@@ -45,10 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Orange
-  type: musique
+  type: jukebox
   image: {fileID: 1123616697002120378, guid: e37d1ec471735d14fac695d842c4cf1f, type: 3}
   alreadyHad: 0
-  modules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class ItemInSpace : MonoBehaviour
@@ -26,7 +25,7 @@ public class ItemInSpace : MonoBehaviour
     {
         if(other.tag == "spaceship")
         {
-            if(typeOfObject == "fuel")
+            if(typeOfObject == "fuel" || typeOfObject == "cometShard")
             {
                 other.GetComponent<Spaceship>().GetSomeFuel(gameObject);
                 Die();

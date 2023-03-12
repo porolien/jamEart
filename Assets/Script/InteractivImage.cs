@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
+using UnityEngine.Rendering.Universal;
 
 public class InteractivImage : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class InteractivImage : MonoBehaviour
     public GameObject Jukebox;
     public GameObject Shield;
     public GameObject Extractor;
+    public Spaceship spaceship;
+    public ModuleUSes applyModule;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,19 +51,41 @@ public class InteractivImage : MonoBehaviour
             {
                 tagOfGameObject.transform.GetChild(0).gameObject.SetActive(false);
                 image.transform.SetParent(tagOfGameObject.transform, false);
-                image.transform.localPosition = new Vector3(0, 0, 0); ;
+                image.transform.localPosition = new Vector3(0, 0, 0);
+                applyModule.putAModule(image.GetComponent<Module>());
+                    foreach (Module module in spaceship.ModulesInventary)
+                {
+                    if (module.name == image.GetComponent<Module>().name)
+                    {
+                        module.willBeseeOnContent = false;
+                    }
+                }
+               
                 itsMoving = false;
+               /* Jukebox.SetActive(false);
+                Shield.SetActive(false);
+                BottomTurret.SetActive(false);
+                TopTurret.SetActive(false);
+                Extractor.SetActive(false);
+                Light.SetActive(false);*/
             }
             if (Input.GetMouseButtonDown(1))
             {
                 Debug.Log(image.GetComponent<Module>().type);
                 image.transform.SetParent(parent, false);
                 itsMoving = false;
+                Jukebox.SetActive(false);
+                Shield.SetActive(false);
+                BottomTurret.SetActive(false);
+                TopTurret.SetActive(false);
+                Extractor.SetActive(false);
+                Light.SetActive(false);
             }
         }
     }
     public void moveImage(GameObject imageClicked, Transform Parent)
     {
+
         itsMoving = true;
         parent = Parent;
         imageClicked.transform.SetParent(transform, false);

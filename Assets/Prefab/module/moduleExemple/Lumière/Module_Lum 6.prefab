@@ -45,10 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Yellow
-  type: lumiere
+  type: light
   image: {fileID: 1123616697002120378, guid: 030fa205982c7214f84cb8fea3522cad, type: 3}
   alreadyHad: 0
-  modules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

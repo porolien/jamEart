@@ -48,7 +48,3 @@ MonoBehaviour:
   type: extractor
   image: {fileID: 1123616697002120378, guid: e95c1959aac62f941899cdd989b25704, type: 3}
   alreadyHad: 0
-  modules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

@@ -45,10 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Shield
-  type: Shield
+  type: shield
   image: {fileID: 1123616697002120378, guid: 095d35e06e247a348bd6b136beae87c9, type: 3}
   alreadyHad: 0
-  modules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

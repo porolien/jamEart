@@ -45,10 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Rouge
-  type: lumiere
+  type: light
   image: {fileID: 1123616697002120378, guid: 0811ed0c000b93443818442e0bf7ec75, type: 3}
   alreadyHad: 0
-  modules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

@@ -8,7 +8,7 @@ public class Spaceship : MonoBehaviour
     public bool shield;
     public float cdShield;
     public float maxFuel;
-    float actualFuel;
+    public float actualFuel;
     float timeBeforeLast;
     public List<Module> ModulesInventary = new List<Module>();
     public Module[] AllModules;
@@ -18,6 +18,10 @@ public class Spaceship : MonoBehaviour
     void Start()
     {
         actualFuel = maxFuel;
+        foreach(var module in AllModules)
+        {
+            module.alreadyHad = false;
+        }
     }
 
     // Update is called once per frame
@@ -33,7 +37,6 @@ public class Spaceship : MonoBehaviour
                 die();
             }
         }
-        Debug.Log(actualFuel);
     }
 
     void die()
@@ -90,6 +93,10 @@ public class Spaceship : MonoBehaviour
                 modulesTemp.Add(mod);
                 modulesTypes.Add(mod.type);
             }
+        }
+        foreach(Module mod in modulesTemp)
+        {
+           
         }
         Module module = modulesTemp[Random.Range(0, modulesTemp.Count)];
         ModulesInventary.Add(module);
