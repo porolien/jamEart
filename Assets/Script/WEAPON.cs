@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class WEAPON : MonoBehaviour
 {
-    float cd;
+    public float cd;
     string WeaponType;
+    bool waitCd;
     public float attack;
     public GameObject TheExtractedItem;
     public GameObject bullet;
@@ -36,8 +37,9 @@ public class WEAPON : MonoBehaviour
                 Debug.Log(hit.point);
                 transform.up = ((hit.point - transform.position).normalized);
             }
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !waitCd)
             {
+                StartCoroutine(onCd());
                 Shoot(hit.point);
             }
         }
@@ -64,6 +66,12 @@ public class WEAPON : MonoBehaviour
         Projectil statBullet = newBullet.GetComponent<Projectil>();
         statBullet.attack = attack;
         statBullet.isDestructible = isDestructible ;
+    }
+    IEnumerator onCd()
+    {
+        waitCd = true;
+        yield return new WaitForSeconds(cd);
+        waitCd = false;
     }
   
 }

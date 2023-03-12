@@ -42,7 +42,7 @@ public class Comet : MonoBehaviour
                 TakeDmg(Projectible.attack);
                 if (Projectible.isDestructible)
                 {
-                    Destroy(other);
+                    Destroy(other.gameObject);
                 }
 
                 else

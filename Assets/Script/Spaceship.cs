@@ -11,8 +11,9 @@ public class Spaceship : MonoBehaviour
     float actualFuel;
     float timeBeforeLast;
     public List<Module> ModulesInventary = new List<Module>();
-    public Module AllModules;
+    public Module[] AllModules;
     public Extract extract;
+    public Player player;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,17 +23,23 @@ public class Spaceship : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeBeforeLast += Time.fixedDeltaTime;  // ajoute a chaque update le temps écoulé depuis le dernier Update		
+        timeBeforeLast += Time.deltaTime;  // ajoute a chaque update le temps écoulé depuis le dernier Update		
         if (timeBeforeLast > 1)
         {
             actualFuel--;
             timeBeforeLast = 0;
+            if(actualFuel <= 0)
+            {
+                die();
+            }
         }
+        Debug.Log(actualFuel);
     }
 
     void die()
     {
-        Destroy(this);
+        Destroy(player.gameObject);
+        Destroy(this.gameObject);
     }
 
     public void TakeDmg(float dmg)
@@ -68,7 +75,7 @@ public class Spaceship : MonoBehaviour
         extract.isExtracted = false;
         List<Module> modulesTemp = new List<Module>();
         List<string> modulesTypes = new List<string>();
-        foreach (Module mod in AllModules.modules)
+        foreach (Module mod in AllModules)
         {
             bool dontAlreadyHaveTheType = false;
             foreach(string types in modulesTypes)
@@ -86,7 +93,7 @@ public class Spaceship : MonoBehaviour
         }
         Module module = modulesTemp[Random.Range(0, modulesTemp.Count)];
         ModulesInventary.Add(module);
-        foreach(Module mod in AllModules.modules)
+        foreach(Module mod in AllModules)
         {
             if(mod.name == module.name)
             {

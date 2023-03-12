@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 70202933}
   - component: {fileID: 70202934}
   - component: {fileID: 70202935}
+  - component: {fileID: 70202936}
   m_Layer: 0
   m_Name: Spaceship_Sheet_Sprite_0 (1)
   m_TagString: spaceship
@@ -417,15 +418,49 @@ MonoBehaviour:
   hp: 0
   shield: 0
   cdShield: 0
-  maxFuel: 0
+  maxFuel: 60
   ModulesInventary:
   - {fileID: 3565185483138231827, guid: adabbb7624ff3db428bbdfe5e293adc9, type: 3}
   - {fileID: 3565185483138231827, guid: adabbb7624ff3db428bbdfe5e293adc9, type: 3}
   - {fileID: 3565185483138231827, guid: adabbb7624ff3db428bbdfe5e293adc9, type: 3}
   - {fileID: 3565185483138231827, guid: adabbb7624ff3db428bbdfe5e293adc9, type: 3}
   - {fileID: 3565185483138231827, guid: adabbb7624ff3db428bbdfe5e293adc9, type: 3}
-  AllModules: {fileID: 0}
+  AllModules: []
   extract: {fileID: 70202934}
+  player: {fileID: 655012676}
+--- !u!114 &70202936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70202929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186ff9fd1ef6efa4b86fd79c66d715f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 
+  name: 
+  turret: []
+  sounds: []
+  lights:
+  - {fileID: 449652750}
+  - {fileID: 1961345801}
+  - {fileID: 305682010}
+  - {fileID: 809060603}
+  - {fileID: 1451404360}
+  - {fileID: 1788337858}
+  - {fileID: 2129143748}
+  - {fileID: 1322484130}
+  - {fileID: 764765581}
+  - {fileID: 1989035332}
+  - {fileID: 1322484130}
+  - {fileID: 765344667}
+  - {fileID: 1935027449}
+  - {fileID: 1650793725}
+  shield: 0
+  extractor: 0
 --- !u!1001 &105219404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1564,13 +1599,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c8125337da9f446996b2c1bb60b334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 0
+  cd: 0.3
+  attack: 2
   TheExtractedItem: {fileID: 0}
   bullet: {fileID: 2362688897385123259, guid: 89c7af67e2414bc48a10b48932a8f4b0, type: 3}
   laser: {fileID: 0}
   shootSpawn: {fileID: 1586285996}
   shootPos: {fileID: 279537248}
-  isDestructible: 0
+  isDestructible: 1
   WeaponActivate: 0
 --- !u!1 &449652748
 GameObject:
@@ -3241,7 +3277,6 @@ MonoBehaviour:
   type: attack
   image: {fileID: 0}
   alreadyHad: 0
-  modules: []
 --- !u!4 &759847044
 Transform:
   m_ObjectHideFlags: 0
@@ -3802,6 +3837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c8125337da9f446996b2c1bb60b334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cd: 0
   attack: 5
   TheExtractedItem: {fileID: 985218638}
   bullet: {fileID: 5374624283487035520, guid: 6816b60fc118fa14d9434c2508e693b1, type: 3}
@@ -3992,7 +4028,6 @@ MonoBehaviour:
   type: deco
   image: {fileID: 0}
   alreadyHad: 0
-  modules: []
 --- !u!4 &868036540
 Transform:
   m_ObjectHideFlags: 0
@@ -5918,7 +5953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1306007921
 Transform:
   m_ObjectHideFlags: 0
@@ -6994,17 +7029,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576056968}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1584082013 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3565185483138231827, guid: ca19dfc79f552dc4b851c53712283a4f, type: 3}
-  m_PrefabInstance: {fileID: 3565185482297852494}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a12fd192962af7428967cfc77ca2e7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1586285995
 GameObject:
   m_ObjectHideFlags: 0
@@ -8117,7 +8141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 08ac9c4d4c9f22d44859c318f5e98f0a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c32d339871d0dcf40b0609c81aa9f449, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9443,14 +9467,14 @@ MonoBehaviour:
       - m_Target: {fileID: 963194230}
         m_TargetAssemblyTypeName: Pause, Assembly-CSharp
         m_MethodName: Resume
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &2060112204
 MonoBehaviour:
@@ -10140,8 +10164,9 @@ MonoBehaviour:
   - {fileID: 3565185483138231827, guid: adabbb7624ff3db428bbdfe5e293adc9, type: 3}
   - {fileID: 3565185483138231827, guid: b94f18580fab4144686733a6bb5104aa, type: 3}
   - {fileID: 3565185483138231827, guid: ca19dfc79f552dc4b851c53712283a4f, type: 3}
-  AllModules: {fileID: 1584082013}
+  AllModules: []
   extract: {fileID: 2138039499}
+  player: {fileID: 0}
 --- !u!1001 &3565185482297852494
 PrefabInstance:
   m_ObjectHideFlags: 0
