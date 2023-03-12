@@ -18,6 +18,7 @@ public class WEAPON : MonoBehaviour
     public bool isDestructible;
     public bool WeaponActivate;
     public bool EnableTheSecondWeapon;
+    public WEAPON TheOtherTurret;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +30,10 @@ public class WEAPON : MonoBehaviour
     {
         if (WeaponActivate)
         {
-            if(EnableTheSecondWeapon && (Input.GetButtonDown("S")|| Input.GetButtonDown("Z")))
+            if (EnableTheSecondWeapon && (Input.GetButtonUp("Vertical")))
             {
-
+                WeaponActivate = false;
+                TheOtherTurret.WeaponActivate = true;
             }
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -51,7 +53,7 @@ public class WEAPON : MonoBehaviour
 
     void Shoot(Vector3 ShootDirection)
     {
-        Debug.Log(ShootDirection);
+        //Debug.Log(ShootDirection);
         GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         // newBullet.transform.position = Vector2.MoveTowards(transform.position, ShootDirection, 20 * Time.deltaTime);
         float totalDirectionX = (ShootDirection.x + ShootDirection.y);
@@ -66,10 +68,18 @@ public class WEAPON : MonoBehaviour
         }
         newBullet.GetComponent<Rigidbody>().velocity = new Vector2((ShootDirection.x / totalDirectionX), (ShootDirection.y / totalDirectionY));
         newBullet.GetComponent<Rigidbody>().velocity = (Vector3.Normalize(newBullet.GetComponent<Rigidbody>().velocity) * SpeedBullet);
-        newBullet.transform.right = (transform.position - ShootDirection).normalized;
+        newBullet.transform.right = (transform.position - shootPos.position).normalized;
         Projectil statBullet = newBullet.GetComponent<Projectil>();
         statBullet.attack = attack;
         statBullet.isDestructible = isDestructible ;
+    }
+    public void DesactivateAllTurret()
+    {
+        if (EnableTheSecondWeapon)
+        {
+            TheOtherTurret.WeaponActivate = false;
+        }
+        WeaponActivate = false;
     }
     IEnumerator onCd()
     {
@@ -77,5 +87,6 @@ public class WEAPON : MonoBehaviour
         yield return new WaitForSeconds(cd);
         waitCd = false;
     }
-  
+   
+
 }

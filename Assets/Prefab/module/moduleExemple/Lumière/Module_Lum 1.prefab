@@ -47,4 +47,5 @@ MonoBehaviour:
   name: Cyan
   type: light
   image: {fileID: 1123616697002120378, guid: b2b6b9932c343b540b02ec50da293625, type: 3}
-  alreadyHad: 0
+  alreadyHad: 1
+  willBeseeOnContent: 1

@@ -20,7 +20,9 @@ public class Spaceship : MonoBehaviour
         actualFuel = maxFuel;
         foreach(var module in AllModules)
         {
+            module.willBeseeOnContent = true;
             module.alreadyHad = false;
+
         }
     }
 
@@ -72,41 +74,45 @@ public class Spaceship : MonoBehaviour
             actualFuel = maxFuel;
         }
     }
-    public void GetSomeModule(GameObject TheITemWhichIsExtract)
+    public void ModuleInInventory()
     {
-        TheITemWhichIsExtract.GetComponent<ItemInSpace>().Die();
-        extract.isExtracted = false;
         List<Module> modulesTemp = new List<Module>();
         List<string> modulesTypes = new List<string>();
         foreach (Module mod in AllModules)
         {
             bool dontAlreadyHaveTheType = false;
-            foreach(string types in modulesTypes)
+            foreach (string types in modulesTypes)
             {
-                if (mod.type == types) 
+                if (mod.type == types)
                 {
                     dontAlreadyHaveTheType = true;
-                } 
+                }
             }
-            if(mod.alreadyHad == false && dontAlreadyHaveTheType == false)
+            if (mod.alreadyHad == false && dontAlreadyHaveTheType == false)
             {
                 modulesTemp.Add(mod);
                 modulesTypes.Add(mod.type);
             }
         }
-        foreach(Module mod in modulesTemp)
+        foreach (Module mod in modulesTemp)
         {
-           
+
         }
         Module module = modulesTemp[Random.Range(0, modulesTemp.Count)];
         ModulesInventary.Add(module);
-        foreach(Module mod in AllModules)
+        foreach (Module mod in AllModules)
         {
-            if(mod.name == module.name)
+            if (mod.name == module.name)
             {
                 mod.alreadyHad = true;
             }
         }
+    }
+    public void GetSomeModule(GameObject TheITemWhichIsExtract)
+    {
+        TheITemWhichIsExtract.GetComponent<ItemInSpace>().Die();
+        extract.isExtracted = false;
+        ModuleInInventory();
     }
     IEnumerator RespawnTheShield()
     {
